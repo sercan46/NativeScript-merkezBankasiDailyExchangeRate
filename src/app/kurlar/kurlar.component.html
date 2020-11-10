@@ -1,0 +1,37 @@
+<ActionBar style="background-color: #e24747;">
+    <ActionItem (tap)="changeMode()"
+    ios.systemIcon="16" ios.position="right"
+    [text]="mode"  android.position="popup"></ActionItem>
+    <Label style="color:white" text="Günlük Kur"></Label>
+        <NavigationButton text="Go Back" android.systemIcon="ic_menu_back" (tap)="goBack()">
+        </NavigationButton>
+
+  </ActionBar>
+
+
+<GridLayout  rows="auto, *">
+
+    <GridLayout style="font-size: 10px;" row="0" columns="2*,4*,*,2*,2*,2*,2*">
+        <Label col="0" text="Kod"></Label>
+        <Label  col="1" text="İsim"></Label>
+        <Label  col="2" text="Birim"></Label>
+        <Label  col="3" text="Döviz Al."></Label>
+        <Label col="4"  text="Döviz Sat."></Label>
+        <Label col="5"  text="Efektif Al."></Label>
+        <Label col="6"  text="Efektif Sat."></Label>
+    </GridLayout>
+    <ListView row="1" style="height:100%" [items]="tamamlananDizi">
+        <ng-template let-item="item">
+                <GridLayout style="font-size: 10px; border-width: 2px;" columns="2*,4*,*,2*,2*,2*,2*" rows="*">
+                <Label row="0" col="0" [text]="item.$.Kod"></Label>
+                <Label row="0" col="1" [text]="item.Isim"></Label>
+                <Label row="0" col="2"[text]="item.Unit"></Label>
+                <Label row="0" col="3" [text]="item.ForexBuying"></Label>
+                <Label row="0" col="4" [text]="item.ForexSelling"></Label>
+                <Label row="0" col="5" [text]="item.BanknoteBuying"></Label>
+                <Label row="0" col="6" [text]="item.BanknoteSelling"></Label>
+            </GridLayout>
+        </ng-template>
+    </ListView>
+
+</GridLayout>

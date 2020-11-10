@@ -1,0 +1,7 @@
+/* Add mobile styles for the component here.  */
+.coverImage {
+    background-image: url('~/assets/back.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}

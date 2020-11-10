@@ -1,0 +1,10 @@
+{
+  "main": "main.js",
+  "android": {
+    "v8Flags": "--expose_gc",
+    "markingMode": "none"
+  },
+  "dependencies": {
+    "nativescript-xml2js": "^0.5.2"
+  }
+}

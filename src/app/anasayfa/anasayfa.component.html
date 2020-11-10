@@ -1,0 +1,11 @@
+<ActionBar style="background-color: #e24747;">
+    <ActionItem (tap)="changeMode()"
+    ios.systemIcon="16" ios.position="right"
+    [text]="mode"  android.position="popup"></ActionItem>
+    <Label style="color:white" text="Ana Sayfa"></Label>
+  </ActionBar>
+<GridLayout class="coverImage" rows="100,100,300">
+    <Button row="0"  text="Günlük Kurları Göster" class="btn btn-primary" (tap)="kurlariAc()"></Button>
+    <Button row="1" text="Kur Hesaplama" class="btn btn-primary" (tap)="hesaplamaAc()"></Button>
+    <Label row="2" style="color: white; text-align:center; padding-top: 200vh;" [text]="text"></Label>
+</GridLayout>

@@ -1,0 +1,11 @@
+/* Add mobile styles for the component here.  */
+.flexBox{
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: baseline;
+    align-content: space-between;
+    font-size: 15px;
+    background-color: chocolate;
+}
